@@ -1,0 +1,101 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color:black;
+  padding-bottom: 20px;
+  
+
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensures it stays behind the content */
+  border-radius: 0 0 0% 0% / 0 0 0% 0%;
+}
+
+/* Hero Title */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensures text stays on top of the video */
+
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.hero-content h1 .outlined-text {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2; /* Ensures cards stay above the curved red line */
+
+}
+
+.card {
+  background: black;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 70px;
+  padding: 20px;
+  transition: transform 0.3s;
+  
+}
+
+.card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+/* CPF Training Icon Adjustment */
+.card:nth-child(2) img {
+  width: 50px;
+}
+
+/* Curved Red Line Positioned Behind the Cards */
+.curved-red-line {
+
+  position: absolute;
+  bottom: -15px; /* Moves the red curve slightly down */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: black;
+  border-radius: 0 0 100% 40% / 0 0 20% 20%;
+  z-index: 1; /* Ensures it stays above the video */
+}
