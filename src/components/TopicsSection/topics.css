@@ -1,70 +1,85 @@
 .topics-section {
-    width: 100%;
-    padding: 40px 0;
-    text-align: center;
-    margin-top: 100px;
-    background-color: black;
-    margin-top: 0px;
-  }
-  
-  .topics-section h2 {
-    font-size: 24px;
-    margin-bottom: 200px;
-    color: #333;
-  }
-  
-  .topics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 0 20px;
-  }
-  
-  .topic-card {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .topic-overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .topic-card:hover .topic-overlay {
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .topics-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .topics-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  position: relative;
+  margin-top: -300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the grid horizontally */
+  justify-content: center; /* Centers content vertically if needed */
 
-  .topics-section{
-    
-    
+/* Title Styling */
+.topics-title  {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 150px;
+
+}
+
+.topics-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px; /* Creates space between title and grid */
+
+}
+
+/* Topics Grid */
+/* Topics Grid */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 0 20px;
+  margin-top: 70px;
+  max-width: 1300px;
+  width: 100%;
+  justify-content: center; /* Center grid items */
+}
+
+/* Topic Card */
+.topic-card {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay */
+.topic-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.topic-card:hover .topic-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 480px) {
+  .topics-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

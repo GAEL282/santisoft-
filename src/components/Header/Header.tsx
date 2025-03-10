@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header">
         <div className="logo">
           <Link to="/"> {/* Clicking this will navigate back to the home page */}
-            <img src="images/santisoft-03.png" alt="Santisoft Logo" className="logo-image" />
+            <img src="images/santisoft-04.png" alt="Santisoft Logo" className="logo-image" />
           </Link>
         </div>
 

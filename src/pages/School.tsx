@@ -6,7 +6,7 @@ const School = () => {
     <>
       <Header />
       <div className="content">
-        <h1>About Our School</h1>
+        <h1>About Our School </h1>
         <p>We provide high-quality distance learning education.</p>
       </div>
       <Footer />

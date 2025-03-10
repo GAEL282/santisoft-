@@ -1,20 +1,29 @@
 .hero-container {
   position: relative;
   width: 100%;
-  height: 400px;
-  overflow: visible;
+  height: 600px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color:black;
+  color: white;
   padding-bottom: 20px;
-  
-
+  z-index:1;
 }
 
-/* Background Video */
+/* Background Wrapper */
+.background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Background Video - Smooth Curved Bottom */
 .background-video {
   position: absolute;
   top: 0;
@@ -22,15 +31,28 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Ensures it stays behind the content */
-  border-radius: 0 0 0% 0% / 0 0 0% 0%;
+  z-index: -2; /* Puts it behind everything */
+  clip-path: ellipse(100% 65% at center top); /* Adjust curve */
+}
+
+
+/* White Section Below the Video */
+.white-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* Adjust height as needed */
+  background: white;/* Must match video */
+  z-index: 1; /* Ensures it is above the red line */
+margin-top: 50%;
 }
 
 /* Hero Title */
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensures text stays on top of the video */
-
+  z-index: 2; /* Ensures text stays on top */
+margin-top: -120px;
 }
 
 .hero-content h1 {
@@ -38,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 120px;
 }
 
 .hero-content h1 .outlined-text {
@@ -58,44 +80,25 @@
   justify-content: center;
   gap: 10px;
   position: relative;
-  z-index: 2; /* Ensures cards stay above the curved red line */
-
+  z-index: 2;
+  margin-top:5;
 }
 
 .card {
-  background: black;
+  background: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 70px;
+  width: 250px;
+  height: 150px;
   padding: 20px;
   transition: transform 0.3s;
-  
 }
 
 .card img {
-  width: 70px;
-  margin-bottom: 15px;
-}
-
-/* CPF Training Icon Adjustment */
-.card:nth-child(2) img {
   width: 50px;
-}
-
-/* Curved Red Line Positioned Behind the Cards */
-.curved-red-line {
-
-  position: absolute;
-  bottom: -15px; /* Moves the red curve slightly down */
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: black;
-  border-radius: 0 0 100% 40% / 0 0 20% 20%;
-  z-index: 1; /* Ensures it stays above the video */
+  margin-bottom: 10px;
 }

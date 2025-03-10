@@ -1,3 +1,23 @@
+
+/* Header */
+.header {
+  background: black;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;  /* Keeps the header fixed at the top */
+  top: 0;  /* Aligns it at the very top */
+  left: 0;
+  width: 100%;  /* Makes sure it covers the full width */
+  z-index: 1000;  /* Ensures it stays on top of other elements */
+}
+
+/* To prevent content from hiding behind the fixed header */
+body {
+  padding-top: 80px; /* Adjust this based on the header height */
+}
+
 /* Top Bar */
 .top-bar {
   display: flex;
